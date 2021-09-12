@@ -1,17 +1,15 @@
 package Abstract;
 
-import java.util.logging.Logger;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 public class App {
-
-    private final static Logger LOGGER = Logger.getGlobal();
 
     public static void main(String[] args) {
         KingdomFactory factory = new ElfKingdomFactory();
         Castle castle = factory.createCastle();
         King king = factory.createKing();
         Army army = factory.createArmy();
-
         LOGGER.info(castle.getDescription());
         LOGGER.info(king.getDescription());
         LOGGER.info(army.getDescription());

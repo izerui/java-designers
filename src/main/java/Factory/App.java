@@ -1,10 +1,9 @@
 package Factory;
 
-import java.util.logging.Logger;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 public class App {
-
-    private final static Logger LOGGER = Logger.getGlobal();
 
     public static void main(String[] args) {
         Car car1 = CarsFactory.getCar(CarType.FORD);

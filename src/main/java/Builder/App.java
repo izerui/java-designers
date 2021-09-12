@@ -1,10 +1,11 @@
 package Builder;
 
+import lombok.extern.slf4j.Slf4j;
+
 import java.util.logging.Logger;
 
+@Slf4j
 public class App {
-
-    private final static Logger LOGGER = Logger.getGlobal();
 
     public static void main(String[] args) {
         Hero mage = new Hero.Builder(Profession.MAGE, "Riobard")
