@@ -1,13 +1,13 @@
 package Bridge;
 
 /**
- * Enchantment.
+ * 附魔基类.
  */
 public interface Enchantment {
 
-  void onActivate();
+  void onActivate(); // 被激活
 
-  void apply();
+  void apply(); // 执行
 
-  void onDeactivate();
+  void onDeactivate(); // 消亡
 }

@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * Sword.
+ * 剑.
  */
 @Slf4j
 @AllArgsConstructor
@@ -14,19 +14,19 @@ public class Sword implements Weapon {
 
   @Override
   public void wield() {
-    LOGGER.info("The sword is wielded.");
+    LOGGER.info("剑开始挥舞.");
     enchantment.onActivate();
   }
 
   @Override
   public void swing() {
-    LOGGER.info("The sword is swung.");
+    LOGGER.info("剑刺了过去.");
     enchantment.apply();
   }
 
   @Override
   public void unwield() {
-    LOGGER.info("The sword is unwielded.");
+    LOGGER.info("剑安静下来.");
     enchantment.onDeactivate();
   }
 

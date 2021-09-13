@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * Hammer.
+ * 锤子.
  */
 @Slf4j
 @AllArgsConstructor
@@ -14,19 +14,19 @@ public class Hammer implements Weapon {
 
   @Override
   public void wield() {
-    LOGGER.info("The hammer is wielded.");
+    LOGGER.info("挥舞着锤子.");
     enchantment.onActivate();
   }
 
   @Override
   public void swing() {
-    LOGGER.info("The hammer is swung.");
+    LOGGER.info("锤子摆动起来.");
     enchantment.apply();
   }
 
   @Override
   public void unwield() {
-    LOGGER.info("The hammer is unwielded.");
+    LOGGER.info("锤子安静下来.");
     enchantment.onDeactivate();
   }
 

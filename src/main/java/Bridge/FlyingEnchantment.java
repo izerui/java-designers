@@ -3,23 +3,23 @@ package Bridge;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * FlyingEnchantment.
+ * 飞行附魔.
  */
 @Slf4j
 public class FlyingEnchantment implements Enchantment {
 
   @Override
   public void onActivate() {
-    LOGGER.info("The item begins to glow faintly.");
+    LOGGER.info("该物品开始发光.");
   }
 
   @Override
   public void apply() {
-    LOGGER.info("The item flies and strikes the enemies finally returning to owner's hand.");
+    LOGGER.info("飞行并击中中敌人后返回.");
   }
 
   @Override
   public void onDeactivate() {
-    LOGGER.info("The item's glow fades.");
+    LOGGER.info("光芒逐渐消失.");
   }
 }
