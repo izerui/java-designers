@@ -4,71 +4,41 @@ import lombok.extern.slf4j.Slf4j;
 import lombok.var;
 
 /**
- * <p>Singleton pattern ensures that the class can have only one existing instance per Java
- * classloader instance and provides global access to it.</p>
+ * 确保一个类只有一个实例，并提供对它的全局访问点。
  *
- * <p>One of the risks of this pattern is that bugs resulting from setting a singleton up in a
- * distributed environment can be tricky to debug since it will work fine if you debug with a
- * single classloader. Additionally, these problems can crop up a while after the implementation of
- * a singleton, since they may start synchronous and only become async with time, so it may
- * not be clear why you are seeing certain changes in behavior.</p>
- *
- * <p>There are many ways to implement the Singleton. The first one is the eagerly initialized
- * instance in {@link IvoryTower}. Eager initialization implies that the implementation is thread
- * safe. If you can afford to give up control of the instantiation moment, then this implementation
- * will suit you fine.</p>
- *
- * <p>The other option to implement eagerly initialized Singleton is enum-based Singleton. The
- * example is found in {@link EnumIvoryTower}. At first glance, the code looks short and simple.
- * However, you should be aware of the downsides including committing to implementation strategy,
- * extending the enum class, serializability, and restrictions to coding. These are extensively
- * discussed in Stack Overflow: http://programmers.stackexchange.com/questions/179386/what-are-the-downsides-of-implementing
- * -a-singleton-with-javas-enum</p>
- *
- * <p>{@link ThreadSafeLazyLoadedIvoryTower} is a Singleton implementation that is initialized on
- * demand. The downside is that it is very slow to access since the whole access method is
- * synchronized.</p>
- *
- * <p>Another Singleton implementation that is initialized on demand is found in
- * {@link ThreadSafeDoubleCheckLocking}. It is somewhat faster than {@link
- * ThreadSafeLazyLoadedIvoryTower} since it doesn't synchronize the whole access method but only the
- * method internals on specific conditions.</p>
- *
- * <p>Yet another way to implement thread-safe lazily initialized Singleton can be found in
- * {@link InitializingOnDemandHolderIdiom}. However, this implementation requires at least Java 8
- * API level to work.</p>
+ * <p>例子: 这里有一座象牙塔可供巫师学习魔法。所有的巫师都使用同一座象牙塔来附魔。这里的象牙塔就是单例。
  */
 @Slf4j
 public class App {
 
-  
+
   public static void main(String[] args) {
 
-    // eagerly initialized singleton
-    var ivoryTower1 = IvoryTower.getInstance();
-    var ivoryTower2 = IvoryTower.getInstance();
+    // 静态成员属性
+    IvoryTower ivoryTower1 = IvoryTower.getInstance();
+    IvoryTower ivoryTower2 = IvoryTower.getInstance();
     LOGGER.info("ivoryTower1={}", ivoryTower1);
     LOGGER.info("ivoryTower2={}", ivoryTower2);
 
-    // lazily initialized singleton
+    // DCL 又称双重检测锁机制: 延迟加载静态成员变量
     var threadSafeIvoryTower1 = ThreadSafeLazyLoadedIvoryTower.getInstance();
     var threadSafeIvoryTower2 = ThreadSafeLazyLoadedIvoryTower.getInstance();
     LOGGER.info("threadSafeIvoryTower1={}", threadSafeIvoryTower1);
     LOGGER.info("threadSafeIvoryTower2={}", threadSafeIvoryTower2);
 
-    // enum singleton
+    // 枚举 推荐使用
     var enumIvoryTower1 = EnumIvoryTower.INSTANCE;
     var enumIvoryTower2 = EnumIvoryTower.INSTANCE;
     LOGGER.info("enumIvoryTower1={}", enumIvoryTower1);
     LOGGER.info("enumIvoryTower2={}", enumIvoryTower2);
 
-    // double checked locking
+    // DCL 又称双重检测锁机制, 同时使用局部变量提升 25% 的性能
     var dcl1 = ThreadSafeDoubleCheckLocking.getInstance();
     LOGGER.info(dcl1.toString());
     var dcl2 = ThreadSafeDoubleCheckLocking.getInstance();
     LOGGER.info(dcl2.toString());
 
-    // initialize on demand holder idiom
+    // 静态内部类,支持懒加载，弥补了静态成员变量方式的缺点
     var demandHolderIdiom = InitializingOnDemandHolderIdiom.getInstance();
     LOGGER.info(demandHolderIdiom.toString());
     var demandHolderIdiom2 = InitializingOnDemandHolderIdiom.getInstance();

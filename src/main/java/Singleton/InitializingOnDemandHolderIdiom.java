@@ -1,17 +1,9 @@
 package Singleton;
 
 /**
- * <p>The Initialize-on-demand-holder idiom is a secure way of creating a lazy initialized singleton
- * object in Java.</p>
- *
- * <p>The technique is as lazy as possible and works in all known versions of Java. It takes
- * advantage of language guarantees about class initialization, and will therefore work correctly
- * in all Java-compliant compilers and virtual machines.</p>
- *
- * <p>The inner class is referenced no earlier (and therefore loaded no earlier by the class loader)
- * than the moment that getInstance() is called. Thus, this solution is thread-safe without
- * requiring special language constructs (i.e. volatile or synchronized).</p>
- *
+ * 类加载机制：静态变量仅在被用到时才进行初始化。
+ * 比如这里 Singleton 被加载并不会导致 LazyHolder.INSTANCE 被加载，只有在调用 Singleton::getInstance
+ * 方法时才会去加载 LazyHolder.INSTANCE 变量，以此实现了懒加载
  */
 public final class InitializingOnDemandHolderIdiom {
 
@@ -22,16 +14,14 @@ public final class InitializingOnDemandHolderIdiom {
   }
 
   /**
-   * Singleton instance.
-   *
-   * @return Singleton instance
+   * 单例
    */
   public static InitializingOnDemandHolderIdiom getInstance() {
     return HelperHolder.INSTANCE;
   }
 
   /**
-   * Provides the lazy-loaded Singleton instance.
+   * 提供延迟加载的单例, static 类型线程安全
    */
   private static class HelperHolder {
     private static final InitializingOnDemandHolderIdiom INSTANCE =

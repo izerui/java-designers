@@ -1,25 +1,25 @@
 package Singleton;
 
 /**
- * Singleton class. Eagerly initialized static instance guarantees thread safety.
+ * 方式一: 静态成员属性,static 类型 线程安全
  */
 public final class IvoryTower {
 
   /**
-   * Private constructor so nobody can instantiate the class.
+   * 私有构造方法,不允许任何人实例化
    */
   private IvoryTower() {
   }
 
   /**
-   * Static to class instance of the class.
+   * 类静态实例
    */
   private static final IvoryTower INSTANCE = new IvoryTower();
 
   /**
-   * To be called by user to obtain instance of the class.
+   * 获取静态实例的方法
    *
-   * @return instance of the singleton.
+   * @return 返回一个单例
    */
   public static IvoryTower getInstance() {
     return INSTANCE;
