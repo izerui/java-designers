@@ -1,7 +1,7 @@
 package Flyweight;
 
 /**
- * Interface for Potions.
+ * 药剂目录接口
  */
 public interface Potion {
 

@@ -4,12 +4,12 @@ import java.util.EnumMap;
 import java.util.Map;
 
 /**
- * PotionFactory is the Flyweight in this example. It minimizes memory use by sharing object
- * instances. It holds a map of potion instances and new potions are created only when none of the
- * type already exists.
+ * PotionFactory 是本例中的享元类。它通过共享对象实例来最小化内存使用。
+ * 它保存着药剂的目录类型，并且只有在它不存在的药剂类型下,才会创建新的药剂。
  */
 public class PotionFactory {
 
+  // 享元对象
   private final Map<PotionType, Potion> potions;
 
   public PotionFactory() {

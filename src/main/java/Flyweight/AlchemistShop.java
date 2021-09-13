@@ -8,7 +8,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * AlchemistShop holds potions on its shelves. It uses PotionFactory to provide the potions.
+ * 药剂商店的货架上放着药剂。使用 PotionFactory 来提供所有药水。
  */
 @Slf4j
 public class AlchemistShop {
@@ -17,10 +17,11 @@ public class AlchemistShop {
   private final List<Potion> bottomShelf;
 
   /**
-   * Constructor.
+   * 炼金药水商店.
    */
   public AlchemistShop() {
-    var factory = new PotionFactory();
+    PotionFactory factory = new PotionFactory();
+    // 上层货架
     topShelf = Arrays.asList(
             factory.createPotion(PotionType.INVISIBILITY),
             factory.createPotion(PotionType.INVISIBILITY),
@@ -31,6 +32,7 @@ public class AlchemistShop {
             factory.createPotion(PotionType.HEALING),
             factory.createPotion(PotionType.HEALING)
     );
+    // 下层货架
     bottomShelf = Arrays.asList(
         factory.createPotion(PotionType.POISON),
         factory.createPotion(PotionType.POISON),
@@ -41,30 +43,26 @@ public class AlchemistShop {
   }
 
   /**
-   * Get a read-only list of all the items on the top shelf.
-   *
-   * @return The top shelf potions
+   * 获取上层货架上所有药剂的只读目录
    */
   public final List<Potion> getTopShelf() {
     return Collections.unmodifiableList(this.topShelf);
   }
 
   /**
-   * Get a read-only list of all the items on the bottom shelf.
-   *
-   * @return The bottom shelf potions
+   * 获取下层货架上所有药剂的只读目录。
    */
   public final List<Potion> getBottomShelf() {
     return Collections.unmodifiableList(this.bottomShelf);
   }
 
   /**
-   * Drink all the potions.
+   * 喝下所有药剂
    */
   public void drinkPotions() {
-    LOGGER.info("Drinking top shelf potions");
+    LOGGER.info("喝下顶层货架上的所有药剂");
     topShelf.forEach(Potion::drink);
-    LOGGER.info("Drinking bottom shelf potions");
+    LOGGER.info("喝下下层货架上的所有药剂");
     bottomShelf.forEach(Potion::drink);
   }
 }
