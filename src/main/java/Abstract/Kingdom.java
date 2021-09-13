@@ -3,6 +3,9 @@ package Abstract;
 import lombok.Getter;
 import lombok.Setter;
 
+/**
+ * 王国工具类
+ */
 @Getter
 @Setter
 public class Kingdom {
@@ -12,19 +15,19 @@ public class Kingdom {
   private Army army;
 
   /**
-   * The factory of kingdom factories.
+   * 王国工厂创建类.
    */
   public static class FactoryMaker {
 
     /**
-     * Enumeration for the different types of Kingdoms.
+     * 不同类型的王国枚举
      */
     public enum KingdomType {
       ELF, ORC
     }
 
     /**
-     * The factory method to create KingdomFactory concrete objects.
+     * 创建王国工厂的方法: 根据类型创建不同的王国工厂类对象.
      */
     public static KingdomFactory makeFactory(KingdomType type) {
       switch (type) {

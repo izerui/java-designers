@@ -19,11 +19,7 @@ import lombok.var;
 @Slf4j
 public class App {
 
-  /**
-   * Program entry point.
-   *
-   * @param args command line args
-   */
+  
   public static void main(String[] args) {
     LOGGER.info("The knight receives an enchanted sword.");
     var enchantedSword = new Sword(new SoulEatingEnchantment());

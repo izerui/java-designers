@@ -3,18 +3,9 @@ package Abstract;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * The Abstract Factory pattern provides a way to encapsulate a group of individual factories that
- * have a common theme without specifying their concrete classes. In normal usage, the client
- * software creates a concrete implementation of the abstract factory and then uses the generic
- * interface of the factory to create the concrete objects that are part of the theme. The client
- * does not know (or care) which concrete objects it gets from each of these internal factories,
- * since it uses only the generic interfaces of their products. This pattern separates the details
- * of implementation of a set of objects from their general usage and relies on object composition,
- * as object creation is implemented in methods exposed in the factory interface.
+ * 提供一个用于创建相关对象家族的接口，而无需指定其具体类。
  *
- * <p>The essence of the Abstract Factory pattern is a factory interface ({@link KingdomFactory})
- * and its implementations ( {@link ElfKingdomFactory}, {@link OrcKingdomFactory}). The example uses
- * both concrete implementations to create a king, a castle, and an army.
+ * 例子: 要创建一个王国，我们需要具有共同主题的对象。 精灵王国需要精灵王，精灵城堡和精灵军队，而兽人王国需要兽王，精灵城堡和兽人军队。 王国中的对象之间存在依赖性。
  */
 @Slf4j
 public class App implements Runnable {
@@ -25,11 +16,7 @@ public class App implements Runnable {
     return kingdom;
   }
 
-  /**
-   * Program entry point.
-   *
-   * @param args command line args
-   */
+
   public static void main(String[] args) {
     App app = new App();
     app.run();
@@ -37,13 +24,13 @@ public class App implements Runnable {
 
   @Override
   public void run() {
-    LOGGER.info("elf kingdom");
+    LOGGER.info("精灵王国.");
     createKingdom(Kingdom.FactoryMaker.KingdomType.ELF);
     LOGGER.info(kingdom.getArmy().getDescription());
     LOGGER.info(kingdom.getCastle().getDescription());
     LOGGER.info(kingdom.getKing().getDescription());
 
-    LOGGER.info("orc kingdom");
+    LOGGER.info("兽人王国.");
     createKingdom(Kingdom.FactoryMaker.KingdomType.ORC);
     LOGGER.info(kingdom.getArmy().getDescription());
     LOGGER.info(kingdom.getCastle().getDescription());

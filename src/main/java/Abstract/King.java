@@ -1,7 +1,7 @@
 package Abstract;
 
 /**
- * King interface.
+ * 国王接口
  */
 public interface King {
 

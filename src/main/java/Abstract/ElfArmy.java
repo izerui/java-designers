@@ -1,11 +1,11 @@
 package Abstract;
 
 /**
- * ElfArmy.
+ * 精灵军队.
  */
 public class ElfArmy implements Army {
 
-  static final String DESCRIPTION = "This is the elven army!";
+  static final String DESCRIPTION = "这是精灵军队.";
 
   @Override
   public String getDescription() {

@@ -1,8 +1,11 @@
+
 package Factory;
 
 /**
- * 车 基础接口
+ * 硬币接口
  */
-public interface Car {
+public interface Coin {
+
   String getDescription();
+
 }

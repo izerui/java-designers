@@ -1,7 +1,7 @@
 package Abstract;
 
 /**
- * Army interface.
+ * 军队接口
  */
 public interface Army {
 

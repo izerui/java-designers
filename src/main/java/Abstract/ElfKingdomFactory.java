@@ -1,7 +1,7 @@
 package Abstract;
 
 /**
- * ElfKingdomFactory concrete factory.
+ * 精灵王国工厂类
  */
 public class ElfKingdomFactory implements KingdomFactory {
 

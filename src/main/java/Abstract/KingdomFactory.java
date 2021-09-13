@@ -1,7 +1,7 @@
 package Abstract;
 
 /**
- * KingdomFactory factory interface.
+ * 王国工厂接口.
  */
 public interface KingdomFactory {
 

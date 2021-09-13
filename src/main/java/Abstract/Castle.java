@@ -1,7 +1,7 @@
 package Abstract;
 
 /**
- * Castle interface.
+ * 城堡接口
  */
 public interface Castle {
 

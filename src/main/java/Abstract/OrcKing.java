@@ -1,11 +1,11 @@
 package Abstract;
 
 /**
- * OrcKing.
+ * 兽人领袖.
  */
 public class OrcKing implements King {
 
-  static final String DESCRIPTION = "This is the orc king!";
+  static final String DESCRIPTION = "这是兽人领袖";
 
   @Override
   public String getDescription() {
