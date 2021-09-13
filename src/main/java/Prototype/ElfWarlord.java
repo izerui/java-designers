@@ -3,7 +3,7 @@ package Prototype;
 import lombok.EqualsAndHashCode;
 
 /**
- * ElfWarlord.
+ * 精灵军队.
  */
 @EqualsAndHashCode
 public class ElfWarlord extends Warlord {
@@ -26,6 +26,6 @@ public class ElfWarlord extends Warlord {
 
   @Override
   public String toString() {
-    return "Elven warlord helps in " + helpType;
+    return "精灵军队来帮忙:  " + helpType;
   }
 }

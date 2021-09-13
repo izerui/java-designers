@@ -4,7 +4,7 @@ import lombok.EqualsAndHashCode;
 import lombok.RequiredArgsConstructor;
 
 /**
- * OrcBeast.
+ * 兽人.
  */
 @EqualsAndHashCode(callSuper = false)
 @RequiredArgsConstructor
@@ -24,7 +24,7 @@ public class OrcBeast extends Beast {
 
   @Override
   public String toString() {
-    return "Orcish wolf attacks with " + weapon;
+    return "兽人开始攻击,使用武器: " + weapon;
   }
 
 }

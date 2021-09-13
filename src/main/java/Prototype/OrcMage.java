@@ -4,7 +4,7 @@ import lombok.EqualsAndHashCode;
 import lombok.RequiredArgsConstructor;
 
 /**
- * OrcMage.
+ * 兽人法师.
  */
 @EqualsAndHashCode(callSuper = true)
 @RequiredArgsConstructor
@@ -24,7 +24,7 @@ public class OrcMage extends Mage {
 
   @Override
   public String toString() {
-    return "Orcish mage attacks with " + weapon;
+    return "兽人法师开始攻击,使用武器: " + weapon;
   }
 
 }

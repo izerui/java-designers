@@ -4,7 +4,7 @@ import lombok.EqualsAndHashCode;
 import lombok.RequiredArgsConstructor;
 
 /**
- * ElfMage.
+ * 精灵法师.
  */
 @EqualsAndHashCode(callSuper = true)
 @RequiredArgsConstructor
@@ -24,7 +24,7 @@ public class ElfMage extends Mage {
 
   @Override
   public String toString() {
-    return "Elven mage helps in " + helpType;
+    return "精灵法师来帮忙: " + helpType;
   }
 
 }

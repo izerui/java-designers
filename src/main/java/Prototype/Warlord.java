@@ -4,7 +4,7 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 /**
- * Warlord.
+ * 军队抽象.
  */
 @EqualsAndHashCode
 @NoArgsConstructor

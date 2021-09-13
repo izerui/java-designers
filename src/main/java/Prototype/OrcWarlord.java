@@ -4,7 +4,7 @@ import lombok.EqualsAndHashCode;
 import lombok.RequiredArgsConstructor;
 
 /**
- * OrcWarlord.
+ * 兽人军队.
  */
 @EqualsAndHashCode(callSuper = true)
 @RequiredArgsConstructor
@@ -24,7 +24,7 @@ public class OrcWarlord extends Warlord {
 
   @Override
   public String toString() {
-    return "Orcish warlord attacks with " + weapon;
+    return "兽人军队攻击: " + weapon;
   }
 
 }

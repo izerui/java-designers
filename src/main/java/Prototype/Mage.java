@@ -4,7 +4,7 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 /**
- * Mage.
+ * 法师.
  */
 @EqualsAndHashCode
 @NoArgsConstructor

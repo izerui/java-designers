@@ -3,14 +3,14 @@ package Prototype;
 import lombok.RequiredArgsConstructor;
 
 /**
- * Concrete factory class.
+ * 工厂实现类
  */
 @RequiredArgsConstructor
 public class HeroFactoryImpl implements HeroFactory {
 
-  private final Mage mage;
-  private final Warlord warlord;
-  private final Beast beast;
+  private final Mage mage; // 法师
+  private final Warlord warlord; // 军队
+  private final Beast beast; // 兽人
 
   /**
    * Create mage.

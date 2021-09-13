@@ -4,7 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
- * 王国工具类
+ * 王国工具对象类
  */
 @Getter
 @Setter

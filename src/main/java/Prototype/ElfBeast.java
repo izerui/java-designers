@@ -4,7 +4,7 @@ import lombok.EqualsAndHashCode;
 import lombok.RequiredArgsConstructor;
 
 /**
- * ElfBeast.
+ * 精灵鹰.
  */
 @EqualsAndHashCode(callSuper = true)
 @RequiredArgsConstructor
@@ -24,7 +24,7 @@ public class ElfBeast extends Beast {
 
   @Override
   public String toString() {
-    return "Elven eagle helps in " + helpType;
+    return "精灵鹰来帮忙: " + helpType;
   }
 
 }

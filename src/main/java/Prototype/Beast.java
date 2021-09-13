@@ -4,7 +4,7 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 /**
- * Beast.
+ * 兽.
  */
 @EqualsAndHashCode
 @NoArgsConstructor
