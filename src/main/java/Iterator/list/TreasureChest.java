@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * TreasureChest, the collection class.
+ * 百宝箱
  */
 public class TreasureChest {
 
@@ -18,16 +18,16 @@ public class TreasureChest {
    */
   public TreasureChest() {
     items = Arrays.asList(
-        new Item(ItemType.POTION, "Potion of courage"),
-        new Item(ItemType.RING, "Ring of shadows"),
-        new Item(ItemType.POTION, "Potion of wisdom"),
-        new Item(ItemType.POTION, "Potion of blood"),
-        new Item(ItemType.WEAPON, "Sword of silver +1"),
-        new Item(ItemType.POTION, "Potion of rust"),
-        new Item(ItemType.POTION, "Potion of healing"),
-        new Item(ItemType.RING, "Ring of armor"),
-        new Item(ItemType.WEAPON, "Steel halberd"),
-        new Item(ItemType.WEAPON, "Dagger of poison"));
+        new Item(ItemType.POTION, "勇气药水"),
+        new Item(ItemType.RING, "暗影戒指"),
+        new Item(ItemType.POTION, "智慧药水"),
+        new Item(ItemType.POTION, "嗜血药水"),
+        new Item(ItemType.WEAPON, "银剑 +1"),
+        new Item(ItemType.POTION, "铁锈药水"),
+        new Item(ItemType.POTION, "治疗药水"),
+        new Item(ItemType.RING, "盔甲之戒"),
+        new Item(ItemType.WEAPON, "钢戟"),
+        new Item(ItemType.WEAPON, "毒之匕首"));
   }
 
   public Iterator<Item> iterator(ItemType itemType) {

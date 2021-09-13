@@ -10,12 +10,9 @@ import lombok.extern.slf4j.Slf4j;
 import static Iterator.list.ItemType.*;
 
 /**
- * The Iterator pattern is a design pattern in which an iterator is used to traverse a container and
- * access the container's elements. The Iterator pattern decouples algorithms from containers.
+ * 迭代器模式是一种设计模式，其中迭代器用于遍历容器并访问容器的元素。迭代器模式将算法与容器分离。
  *
- * <p>In this example the Iterator ({@link Iterator}) adds abstraction layer on top of a collection
- * ({@link TreasureChest}). This way the collection can change its internal implementation without
- * affecting its clients.
+ * <p>在此示例中，迭代器 ({@link Iterator}) 在集合 ({@link TreasureChest}) 之上添加了抽象层。这样，集合可以在不影响其客户端的情况下更改其内部实现。
  */
 @Slf4j
 public class App {
@@ -24,7 +21,7 @@ public class App {
 
   private static void demonstrateTreasureChestIteratorForType(ItemType itemType) {
     LOGGER.info("------------------------");
-    LOGGER.info("Item Iterator for ItemType " + itemType + ": ");
+    LOGGER.info("宝物类型 " + itemType + ": ");
     Iterator<Item> itemIterator = TREASURE_CHEST.iterator(itemType);
     while (itemIterator.hasNext()) {
       LOGGER.info(itemIterator.next().toString());

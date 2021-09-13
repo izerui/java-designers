@@ -1,7 +1,7 @@
 package Iterator.list;
 
 /**
- * ItemType enumeration.
+ * 宝物枚举
  */
 public enum ItemType {
 

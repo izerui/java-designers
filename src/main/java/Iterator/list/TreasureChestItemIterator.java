@@ -5,7 +5,7 @@ import Iterator.Iterator;
 import java.util.List;
 
 /**
- * TreasureChestItemIterator.
+ * 百宝箱迭代器
  */
 public class TreasureChestItemIterator implements Iterator<Item> {
 

@@ -6,8 +6,7 @@ import java.util.ArrayDeque;
 import java.util.NoSuchElementException;
 
 /**
- * An in-order implementation of a BST Iterator. For example, given a BST with Integer values,
- * expect to retrieve TreeNodes according to the Integer's natural ordering (1, 2, 3...)
+ * BST 二叉树迭代器的有序实现。例如，给定一个带有整数值的 BST，期望根据整数的自然顺序（1、2、3...）检索树节点
  *
  * @param <T> This Iterator has been implemented with generic typing to allow for TreeNodes of
  *            different value types
