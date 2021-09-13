@@ -4,16 +4,23 @@ import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * RequestHandler.
+ * 处理基类
  */
 @Slf4j
-@AllArgsConstructor
 public abstract class RequestHandler {
 
   private final RequestHandler next;
 
   /**
-   * Request handler.
+   * 构造方法,接收下一个处理类
+   * @param next
+   */
+  public RequestHandler(RequestHandler next) {
+    this.next = next;
+  }
+
+  /**
+   * 接收请求
    */
   public void handleRequest(Request req) {
     if (next != null) {
@@ -22,7 +29,7 @@ public abstract class RequestHandler {
   }
 
   protected void printHandling(Request req) {
-    LOGGER.info("{} handling request \"{}\"", this, req);
+    LOGGER.info("{} 处理请求 \"{}\"", this, req);
   }
 
   @Override

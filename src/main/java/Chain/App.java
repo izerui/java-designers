@@ -1,24 +1,21 @@
 package Chain;
 
+import lombok.extern.slf4j.Slf4j;
+
 /**
- * The Chain of Responsibility pattern is a design pattern consisting of command objects and a
- * series of processing objects. Each processing object contains logic that defines the types of
- * command objects that it can handle; the rest are passed to the next processing object in the
- * chain. A mechanism also exists for adding new processing objects to the end of this chain.
+ * 责任链模式: 它帮助构建一串对象。请求从一个对象中进入并结束然后进入到一个个对象中直到找到合适的处理器。
  *
- * <p>In this example we organize the request handlers ({@link RequestHandler}) into a chain where
- * each handler has a chance to act on the request on its turn. Here the king ({@link OrcKing})
- * makes requests and the military orcs ({@link OrcCommander}, {@link OrcOfficer}, {@link
- * OrcSoldier}) form the handler chain.
+ * <p>在这个例子中，我们将请求处理程序 ({@link RequestHandler}) 组织成一个链，其中每个处理程序都有机会处理请求。
+ * 在这里，兽王 ({@link OrcKing}) 发出命令，兽人指挥官 ({@link OrcCommander}、兽人中士{@link OrcOfficer}、兽人士兵{@link OrcSoldier}) 形成处理链。
  */
+@Slf4j
 public class App {
 
-  
-  public static void main(String[] args) {
 
+  public static void main(String[] args) {
     OrcKing king = new OrcKing();
-    king.makeRequest(new Request(RequestType.DEFEND_CASTLE, "defend castle"));
-    king.makeRequest(new Request(RequestType.TORTURE_PRISONER, "torture prisoner"));
-    king.makeRequest(new Request(RequestType.COLLECT_TAX, "collect tax"));
+    king.makeRequest(new Request(RequestType.DEFEND_CASTLE, "保卫城堡"));
+    king.makeRequest(new Request(RequestType.TORTURE_PRISONER, "折磨囚犯"));
+    king.makeRequest(new Request(RequestType.COLLECT_TAX, "收税"));
   }
 }

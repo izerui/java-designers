@@ -1,7 +1,7 @@
 package Chain;
 
 /**
- * OrcCommander.
+ * 兽人指挥官处理类.
  */
 public class OrcCommander extends RequestHandler {
 
@@ -21,6 +21,6 @@ public class OrcCommander extends RequestHandler {
 
   @Override
   public String toString() {
-    return "Orc commander";
+    return "兽人指挥官";
   }
 }

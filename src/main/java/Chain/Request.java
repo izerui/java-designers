@@ -1,34 +1,37 @@
 package Chain;
 
+import lombok.Getter;
+
 import java.util.Objects;
 
 /**
- * Request.
+ * 请求类.
  */
 public class Request {
 
   /**
-   * The type of this request, used by each item in the chain to see if they should or can handle
-   * this particular request.
+   * 请求的类型，链中每个处理者通过它来判断是否执行命令。
    */
+  @Getter
   private final RequestType requestType;
 
   /**
-   * A description of the request.
+   * 命令
    */
+  @Getter
   private final String requestDescription;
 
   /**
-   * Indicates if the request is handled or not. A request can only switch state from unhandled to
-   * handled, there's no way to 'unhandle' a request.
+   * 标示是否处理过。请求只能从未处理状态切换到已处理状态，无法“取消处理”请求。
    */
+  @Getter
   private boolean handled;
 
   /**
-   * Create a new request of the given type and accompanied description.
+   * 创建一个指定类型和命令的请求
    *
-   * @param requestType        The type of request
-   * @param requestDescription The description of the request
+   * @param requestType        请求类型
+   * @param requestDescription 请求命令描述
    */
   public Request(final RequestType requestType, final String requestDescription) {
     this.requestType = Objects.requireNonNull(requestType);
@@ -36,38 +39,10 @@ public class Request {
   }
 
   /**
-   * Get a description of the request.
-   *
-   * @return A human readable description of the request
-   */
-  public String getRequestDescription() {
-    return requestDescription;
-  }
-
-  /**
-   * Get the type of this request, used by each person in the chain of command to see if they should
-   * or can handle this particular request.
-   *
-   * @return The request type
-   */
-  public RequestType getRequestType() {
-    return requestType;
-  }
-
-  /**
-   * Mark the request as handled.
+   * 标记处理过
    */
   public void markHandled() {
     this.handled = true;
-  }
-
-  /**
-   * Indicates if this request is handled or not.
-   *
-   * @return <tt>true</tt> when the request is handled, <tt>false</tt> if not
-   */
-  public boolean isHandled() {
-    return this.handled;
   }
 
   @Override
