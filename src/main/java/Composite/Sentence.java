@@ -3,12 +3,12 @@ package Composite;
 import java.util.List;
 
 /**
- * Sentence.
+ * 句子.
  */
 public class Sentence extends LetterComposite {
 
   /**
-   * Constructor.
+   * 构造方法.
    */
   public Sentence(List<Word> words) {
     words.forEach(this::add);

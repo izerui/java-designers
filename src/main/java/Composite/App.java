@@ -4,28 +4,23 @@ import lombok.extern.slf4j.Slf4j;
 import lombok.var;
 
 /**
- * The Composite pattern is a partitioning design pattern. The Composite pattern describes that a
- * group of objects is to be treated in the same way as a single instance of an object. The intent
- * of a composite is to "compose" objects into tree structures to represent part-whole hierarchies.
- * Implementing the Composite pattern lets clients treat individual objects and compositions
- * uniformly.
+ * 将对象组合成树结构以表示部分整体层次结构。 组合可以使客户统一对待单个对象和组合对象。
  *
- * <p>In this example we have sentences composed of words composed of letters. All of the objects
- * can be treated through the same interface ({@link LetterComposite}).
+ * <p>在这个例子中，我们有由字母组成的单词,由单词组成的句子。所有对象都可以通过相同的接口 ({@link LetterComposite}) 进行处理。
  *
  */
 @Slf4j
 public class App {
 
-  
+
   public static void main(String[] args) {
 
     var messenger = new Messenger();
 
-    LOGGER.info("Message from the orcs: ");
+    LOGGER.info("来自兽人的消息: ");
     messenger.messageFromOrcs().print();
 
-    LOGGER.info("Message from the elves: ");
+    LOGGER.info("来自精灵的消息: ");
     messenger.messageFromElves().print();
   }
 }

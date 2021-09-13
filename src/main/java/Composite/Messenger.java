@@ -3,15 +3,17 @@ package Composite;
 import lombok.var;
 
 import java.util.Arrays;
+import java.util.List;
 
 /**
- * Messenger.
+ * 消息类
  */
 public class Messenger {
 
+    // 来自兽人的消息
     LetterComposite messageFromOrcs() {
 
-        var words = Arrays.asList(
+        List<Word> words = Arrays.asList(
                 new Word('W', 'h', 'e', 'r', 'e'),
                 new Word('t', 'h', 'e', 'r', 'e'),
                 new Word('i', 's'),
@@ -27,9 +29,10 @@ public class Messenger {
 
     }
 
+    // 来自精灵的消息
     LetterComposite messageFromElves() {
 
-        var words = Arrays.asList(
+        List<Word> words = Arrays.asList(
                 new Word('M', 'u', 'c', 'h'),
                 new Word('w', 'i', 'n', 'd'),
                 new Word('p', 'o', 'u', 'r', 's'),

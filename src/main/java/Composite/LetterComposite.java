@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Composite interface.
+ * 组合抽象
  */
 public abstract class LetterComposite {
 

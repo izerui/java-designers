@@ -3,20 +3,21 @@ package Composite;
 import java.util.List;
 
 /**
- * Word.
+ * 单词.
  */
 public class Word extends LetterComposite {
 
   /**
-   * Constructor.
+   * 单词的构造方法.
+   * @param letters 字母集合
    */
   public Word(List<Letter> letters) {
     letters.forEach(this::add);
   }
 
   /**
-   * Constructor.
-   * @param letters to include
+   * 单词的构造方法.
+   * @param letters 字母数组
    */
   public Word(char... letters) {
     for (char letter : letters) {
