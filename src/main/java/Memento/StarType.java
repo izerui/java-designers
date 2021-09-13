@@ -1,14 +1,14 @@
 package Memento;
 
 /**
- * StarType enumeration.
+ * 星球类型枚举
  */
 public enum StarType {
-  SUN("sun"),
-  RED_GIANT("red giant"),
-  WHITE_DWARF("white dwarf"),
-  SUPERNOVA("supernova"),
-  DEAD("dead star");
+  SUN("太阳"),
+  RED_GIANT("红矮星"),
+  WHITE_DWARF("白矮星"),
+  SUPERNOVA("超新星"),
+  DEAD("死星");
 
   private final String title;
 
