@@ -4,11 +4,10 @@ import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
- * Generic observer inspired by Java Generics and Collection by {@literal Naftalin & Wadler}.
- *
- * @param <S> Subject
- * @param <O> Observer
- * @param <A> Argument type
+ * 泛型观察者
+ * @param <S> 天气
+ * @param <O> 观察者
+ * @param <A> 天气类型
  */
 public abstract class Observable<S extends Observable<S, O, A>, O extends Observer<S, O, A>, A> {
 

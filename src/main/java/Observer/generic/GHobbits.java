@@ -11,6 +11,6 @@ public class GHobbits implements Race {
 
   @Override
   public void update(GWeather weather, WeatherType weatherType) {
-    LOGGER.info("The hobbits are facing " + weatherType.getDescription() + " weather now");
+    LOGGER.info("霍比特人发现现在天气是: " + weatherType.getDescription());
   }
 }

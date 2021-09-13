@@ -5,10 +5,10 @@ package Observer;
  */
 public enum WeatherType {
 
-  SUNNY("Sunny"),
-  RAINY("Rainy"),
-  WINDY("Windy"),
-  COLD("Cold");
+  SUNNY("晴天"),
+  RAINY("雨天"),
+  WINDY("狂风天气"),
+  COLD("冬天");
 
   private final String description;
 

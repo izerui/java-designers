@@ -11,6 +11,6 @@ public class GOrcs implements Race {
 
   @Override
   public void update(GWeather weather, WeatherType weatherType) {
-    LOGGER.info("The orcs are facing " + weatherType.getDescription() + " weather now");
+    LOGGER.info("兽人发现现在天气是: " + weatherType.getDescription());
   }
 }

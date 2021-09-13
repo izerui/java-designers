@@ -16,12 +16,12 @@ public class GWeather extends Observable<GWeather, Race, WeatherType> {
   }
 
   /**
-   * Makes time pass for weather.
+   * 随着时间的流逝
    */
   public void timePasses() {
     WeatherType[] enumValues = WeatherType.values();
     currentWeather = enumValues[(currentWeather.ordinal() + 1) % enumValues.length];
-    LOGGER.info("The weather changed to {}.", currentWeather);
+    LOGGER.info("天气变成了: {}.", currentWeather.getDescription());
     notifyObservers(currentWeather);
   }
 }

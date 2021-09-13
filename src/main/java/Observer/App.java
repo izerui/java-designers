@@ -7,20 +7,17 @@ import Observer.generic.Observable;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * The Observer pattern is a software design pattern in which an object, called the subject,
- * maintains a list of its dependents, called observers, and notifies them automatically of any
- * state changes, usually by calling one of their methods. It is mainly used to implement
- * distributed event handling systems. The Observer pattern is also a key part in the familiar
- * model–view–controller (MVC) architectural pattern. The Observer pattern is implemented in
- * numerous programming libraries and systems, including almost all GUI toolkits.
+ * 观察者模式是一种软件设计模式，其中称为主体的对象维护其依赖者列表，称为观察者，并通常通过调用它们的方法之一来自动通知它们任何状态更改。
+ * 它主要用于实现分布式事件处理系统。观察者模式也是熟悉的模型-视图-控制器 (MVC) 架构模式中的关键部分。观察者模式在许多编程库和系统中实现，
+ * 包括几乎所有的 GUI 工具包。
  *
- * <p>In this example {@link Observer.Weather} has a state that can be observed. The {@link Observer.Orcs} and {@link
- * Observer.Hobbits} register as observers and receive notifications when the {@link Observer.Weather} changes.
+ * <p>在这个例子中，{@link Observer.Weather} 有一个可以被观察到的状态。 {@link Observer.Orcs} 和 {@link Observer.Hobbits}
+ * 注册为观察者并在 {@link Observer.Weather} 更改时收到通知。
  */
 @Slf4j
 public class App {
 
-  
+
   public static void main(String[] args) {
 
     Weather weather = new Observer.Weather();
@@ -33,7 +30,7 @@ public class App {
     weather.timePasses();
 
     // Generic observer inspired by Java Generics and Collections by Naftalin & Wadler
-    LOGGER.info("--Running generic version--");
+    LOGGER.info("--运行泛型版本--");
     GWeather genericWeather = new GWeather();
     genericWeather.addObserver(new GOrcs());
     genericWeather.addObserver(new GHobbits());

@@ -6,13 +6,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Weather can be observed by implementing {@link WeatherObserver} interface and registering as
- * listener.
+ * 可以通过实现 {@link WeatherObserver} 接口并注册为监听器来观察天气。
  */
 @Slf4j
 public class Weather {
 
+  // 当前天气
   private Observer.WeatherType currentWeather;
+
+  // 多个天气观察者
   private final List<WeatherObserver> observers;
 
   public Weather() {
@@ -34,7 +36,7 @@ public class Weather {
   public void timePasses() {
     WeatherType[] enumValues = Observer.WeatherType.values();
     currentWeather = enumValues[(currentWeather.ordinal() + 1) % enumValues.length];
-    LOGGER.info("The weather changed to {}.", currentWeather);
+    LOGGER.info("天气变成了 {}.", currentWeather.getDescription());
     notifyObservers();
   }
 

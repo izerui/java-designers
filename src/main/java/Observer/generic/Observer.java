@@ -1,7 +1,7 @@
 package Observer.generic;
 
 /**
- * Observer.
+ * 观察员泛型基类.
  *
  * @param <S> Observable
  * @param <O> Observer
