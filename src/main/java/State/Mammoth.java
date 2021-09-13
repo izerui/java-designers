@@ -1,18 +1,19 @@
 package State;
 
 /**
- * Mammoth has internal state that defines its behavior.
+ * 长毛象 具有定义其行为的内部状态。
  */
 public class Mammoth {
 
   private State state;
 
+  // 默认是平静状态
   public Mammoth() {
     state = new PeacefulState(this);
   }
 
   /**
-   * Makes time pass for the mammoth.
+   * 状态切换
    */
   public void timePasses() {
     if (state.getClass().equals(PeacefulState.class)) {
@@ -29,7 +30,7 @@ public class Mammoth {
 
   @Override
   public String toString() {
-    return "The mammoth";
+    return "长毛象";
   }
 
   public void observe() {
