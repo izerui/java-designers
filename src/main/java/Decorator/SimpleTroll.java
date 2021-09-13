@@ -3,14 +3,14 @@ package Decorator;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * SimpleTroll implements {@link Troll} interface directly.
+ * 赤脚双拳的巨魔
  */
 @Slf4j
 public class SimpleTroll implements Troll {
 
   @Override
   public void attack() {
-    LOGGER.info("The troll tries to grab you!");
+    LOGGER.info("巨魔视图抓住你");
   }
 
   @Override
@@ -20,6 +20,6 @@ public class SimpleTroll implements Troll {
 
   @Override
   public void fleeBattle() {
-    LOGGER.info("The troll shrieks in horror and runs away!");
+    LOGGER.info("巨魔尖叫的跑了.");
   }
 }

@@ -4,18 +4,19 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * Decorator that adds a club for the troll.
+ * 武装装饰器
  */
 @Slf4j
 @RequiredArgsConstructor
 public class ClubbedTroll implements Troll {
 
-  private final Troll decorated;
+  private final Troll decorated; // 巨魔
 
+  // 攻击
   @Override
   public void attack() {
     decorated.attack();
-    LOGGER.info("The troll swings at you with a club!");
+    LOGGER.info("巨魔拿棍棒攻击你.");
   }
 
   @Override
