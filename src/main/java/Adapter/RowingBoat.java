@@ -1,7 +1,7 @@
 package Adapter;
 
 /**
- * The interface expected by the client.<br> A rowing boat is rowed to move.
+ * 开划艇的基本技能
  */
 public interface RowingBoat {
 

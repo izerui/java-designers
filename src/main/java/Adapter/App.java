@@ -3,33 +3,21 @@ package Adapter;
 import lombok.var;
 
 /**
- * An adapter helps two incompatible interfaces to work together. This is the real world definition
- * for an adapter. Interfaces may be incompatible but the inner functionality should suit the need.
- * The Adapter design pattern allows otherwise incompatible classes to work together by converting
- * the interface of one class into an interface expected by the clients.
+ * 将一个接口转换成另一个客户所期望的接口。适配器让那些本来因为接口不兼容的类可以合作无间。
  *
- * <p>There are two variations of the Adapter pattern: The class adapter implements the adaptee's
- * interface whereas the object adapter uses composition to contain the adaptee in the adapter
- * object. This example uses the object adapter approach.
+ * 适配器有两种实现方式:
+ * 1. 类适配器: 实现适配器的接口
+ * 2. 对象适配器: 通过组合方式将适配器包含在适配器对象中
  *
- * <p>The Adapter ({@link FishingBoatAdapter}) converts the interface of the adaptee class ({@link
- * FishingBoat}) into a suitable one expected by the client ({@link RowingBoat}).
- *
- * <p>The story of this implementation is this. <br> Pirates are coming! we need a {@link
- * RowingBoat} to flee! We have a {@link FishingBoat} and our captain. We have no time to make up a
- * new ship! we need to reuse this {@link FishingBoat}. The captain needs a rowing boat which he can
- * operate. The spec is in {@link RowingBoat}. We will use the Adapter pattern to reuse {@link
- * FishingBoat}.
+ * <p> 这个故事是这样的: 假设海盗来了，我们的船长需要逃跑，但是只有渔船可用。我们需要创造一个适配器，让船长能够用他的划艇技能操作渔船
  */
 public final class App {
 
   private App() {
   }
 
-  
+
   public static void main(final String[] args) {
-    // The captain can only operate rowing boats but with adapter he is able to
-    // use fishing boats as well
     var captain = new Captain(new FishingBoatAdapter());
     captain.row();
   }
