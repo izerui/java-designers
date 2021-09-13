@@ -3,46 +3,30 @@ package Mediator;
 import lombok.var;
 
 /**
- * The Mediator pattern defines an object that encapsulates how a set of objects interact. This
- * pattern is considered to be a behavioral pattern due to the way it can alter the program's
- * running behavior.
+ * 中介者: 定义一个封装一组对象如何交互的对象。调解器通过防止对象明确地相互引用来促进松散耦合，并且它允许您独立地改变它们的交互。
  *
- * <p>Usually a program is made up of a large number of classes. So the logic and computation is
- * distributed among these classes. However, as more classes are developed in a program, especially
- * during maintenance and/or refactoring, the problem of communication between these classes may
- * become more complex. This makes the program harder to read and maintain. Furthermore, it can
- * become difficult to change the program, since any change may affect code in several other
- * classes.
- *
- * <p>With the Mediator pattern, communication between objects is encapsulated with a mediator
- * object. Objects no longer communicate directly with each other, but instead communicate through
- * the mediator. This reduces the dependencies between communicating objects, thereby lowering the
- * coupling.
- *
- * <p>In this example the mediator encapsulates how a set of objects ({@link PartyMember})
- * interact. Instead of referring to each other directly they use the mediator ({@link Party})
- * interface.
+ * <p>在此示例中，中介器封装了一组对象 ({@link PartyMember}) 如何交互。他们使用中介（{@link Party}）接口，而不是直接相互引用。
  */
 public class App {
 
-  
+
   public static void main(String[] args) {
 
-    // create party and members
+    // 创建部队和成员
     Party party = new PartyImpl();
     var hobbit = new Hobbit();
     var wizard = new Wizard();
     var rogue = new Rogue();
     var hunter = new Hunter();
 
-    // add party members
+    // 部队添加成员
     party.addMember(hobbit);
     party.addMember(wizard);
     party.addMember(rogue);
     party.addMember(hunter);
 
-    // perform actions -> the other party members
-    // are notified by the party
+    // 执行命令 -> 通知其他成员执行命令
+    // 由当事人通知
     hobbit.act(Action.ENEMY);
     wizard.act(Action.TALE);
     rogue.act(Action.GOLD);
