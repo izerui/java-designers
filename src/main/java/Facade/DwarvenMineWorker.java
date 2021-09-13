@@ -5,25 +5,25 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.Arrays;
 
 /**
- * DwarvenMineWorker is one of the goldmine subsystems.
+ * 矮人工作者抽象基类
  */
 @Slf4j
 public abstract class DwarvenMineWorker {
 
   public void goToSleep() {
-    LOGGER.info("{} goes to sleep.", name());
+    LOGGER.info("{} 去睡觉.", name());
   }
 
   public void wakeUp() {
-    LOGGER.info("{} wakes up.", name());
+    LOGGER.info("{} 醒来了.", name());
   }
 
   public void goHome() {
-    LOGGER.info("{} goes home.", name());
+    LOGGER.info("{} 回家.", name());
   }
 
   public void goToMine() {
-    LOGGER.info("{} goes to the mine.", name());
+    LOGGER.info("{} 去矿井.", name());
   }
 
   private void action(Action action) {

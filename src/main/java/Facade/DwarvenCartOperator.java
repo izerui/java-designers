@@ -3,18 +3,18 @@ package Facade;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * DwarvenCartOperator is one of the goldmine subsystems.
+ * 运输矮人
  */
 @Slf4j
 public class DwarvenCartOperator extends DwarvenMineWorker {
 
   @Override
   public void work() {
-    LOGGER.info("{} moves gold chunks out of the mine.", name());
+    LOGGER.info("{} 将金子运出矿山.", name());
   }
 
   @Override
   public String name() {
-    return "Dwarf cart operator";
+    return "运输矮人";
   }
 }

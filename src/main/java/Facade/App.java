@@ -1,19 +1,13 @@
 package Facade;
 
 /**
- * The Facade design pattern is often used when a system is very complex or difficult to understand
- * because the system has a large number of interdependent classes or its source code is
- * unavailable. This pattern hides the complexities of the larger system and provides a simpler
- * interface to the client. It typically involves a single wrapper class which contains a set of
- * members required by client. These members access the system on behalf of the facade client and
- * hide the implementation details.
+ * 外观模式为一个复杂的子系统提供一个简单的接口。
  *
- * <p>In this example the Facade is ({@link DwarvenGoldmineFacade}) and it provides a simpler
- * interface to the goldmine subsystem.
+ * <p>在这个例子中，({@link DwarvenGoldmineFacade})是一个外观类，它为挖金矿的复杂动作提供了一个更简单的接口。
  */
 public class App {
 
-  
+
   public static void main(String[] args) {
     DwarvenGoldmineFacade facade = new DwarvenGoldmineFacade();
     facade.startNewDay();

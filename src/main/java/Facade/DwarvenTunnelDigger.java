@@ -3,18 +3,18 @@ package Facade;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * DwarvenTunnelDigger is one of the goldmine subsystems.
+ * 开挖掘机矮人
  */
 @Slf4j
 public class DwarvenTunnelDigger extends DwarvenMineWorker {
 
   @Override
   public void work() {
-    LOGGER.info("{} creates another promising tunnel.", name());
+    LOGGER.info("{} 开通了另一条隧道.", name());
   }
 
   @Override
   public String name() {
-    return "Dwarven tunnel digger";
+    return "开挖掘机矮人";
   }
 }
