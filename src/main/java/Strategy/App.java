@@ -4,55 +4,52 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  *
- * <p>The Strategy pattern (also known as the policy pattern) is a software design pattern that
- * enables an algorithm's behavior to be selected at runtime.</p>
+ * <p>策略模式（也称为策略模式）是一种软件设计模式，可以在运行时选择算法的行为。</p>
  *
- * <p>Before Java 8 the Strategies needed to be separate classes forcing the developer
- * to write lots of boilerplate code. With modern Java, it is easy to pass behavior
- * with method references and lambdas making the code shorter and more readable.</p>
+ * <p>在 Java 8 之前，Strategies 需要是单独的类，迫使开发人员编写大量样板代码。
+ * 使用现代 Java，可以轻松地通过方法引用和 lambda 传递行为，从而使代码更短且更具可读性。</p>
  *
- * <p>In this example ({@link DragonSlayingStrategy}) encapsulates an algorithm. The containing
- * object ({@link DragonSlayer}) can alter its behavior by changing its strategy.</p>
+ * <p>在这个例子中 ({@link DragonSlayingStrategy})屠龙策略封装了一个算法。 ({@link DragonSlayer}) 屠龙者可以通过改变其策略来改变其行为。</p>
  *
  */
 @Slf4j
 public class App {
 
-  
+
   public static void main(String[] args) {
     // GoF Strategy pattern
-    LOGGER.info("Green dragon spotted ahead!");
+    LOGGER.info("前方发现绿龙");
     DragonSlayer dragonSlayer = new DragonSlayer(new MeleeStrategy());
     dragonSlayer.goToBattle();
-    LOGGER.info("Red dragon emerges.");
+    LOGGER.info("红龙现身");
     dragonSlayer.changeStrategy(new ProjectileStrategy());
     dragonSlayer.goToBattle();
-    LOGGER.info("Black dragon lands before you.");
+    LOGGER.info("黑龙在你面前降落");
     dragonSlayer.changeStrategy(new SpellStrategy());
     dragonSlayer.goToBattle();
 
     // Java 8 functional implementation Strategy pattern
-    LOGGER.info("Green dragon spotted ahead!");
+    LOGGER.info("前方发现绿龙");
     dragonSlayer = new DragonSlayer(
-        () -> LOGGER.info("With your Excalibur you severe the dragon's head!"));
+        () -> LOGGER.info("你用神剑斩断了龙的头颅"));
     dragonSlayer.goToBattle();
-    LOGGER.info("Red dragon emerges.");
+    LOGGER.info("红龙现身");
     dragonSlayer.changeStrategy(() -> LOGGER.info(
-        "You shoot the dragon with the magical crossbow and it falls dead on the ground!"));
+        "你用魔法弩射龙，它倒在地上死了！"));
     dragonSlayer.goToBattle();
-    LOGGER.info("Black dragon lands before you.");
+    LOGGER.info("黑龙在你面前降落");
     dragonSlayer.changeStrategy(() -> LOGGER.info(
-        "You cast the spell of disintegration and the dragon vaporizes in a pile of dust!"));
+        "你施展了瓦解咒语，巨龙在一堆尘土中蒸发！"));
     dragonSlayer.goToBattle();
 
     // Java 8 lambda implementation with enum Strategy pattern
-    LOGGER.info("Green dragon spotted ahead!");
+    LOGGER.info("前方发现绿龙");
     dragonSlayer.changeStrategy(LambdaStrategy.Strategy.MeleeStrategy);
     dragonSlayer.goToBattle();
-    LOGGER.info("Red dragon emerges.");
+    LOGGER.info("红龙现身。");
     dragonSlayer.changeStrategy(LambdaStrategy.Strategy.ProjectileStrategy);
     dragonSlayer.goToBattle();
-    LOGGER.info("Black dragon lands before you.");
+    LOGGER.info("黑龙在你面前降落。");
     dragonSlayer.changeStrategy(LambdaStrategy.Strategy.SpellStrategy);
     dragonSlayer.goToBattle();
   }

@@ -7,11 +7,11 @@ public class LambdaStrategy {
 
   public enum Strategy implements DragonSlayingStrategy {
     MeleeStrategy(() -> LOGGER.info(
-        "With your Excalibur you severe the dragon's head!")),
+        "用你的剑斩断了龙的头颅!")),
     ProjectileStrategy(() -> LOGGER.info(
-        "You shoot the dragon with the magical crossbow and it falls dead on the ground!")),
+        "你用魔法弩射龙,龙倒在地上死了!")),
     SpellStrategy(() -> LOGGER.info(
-        "You cast the spell of disintegration and the dragon vaporizes in a pile of dust!"));
+        "你施展了瓦解咒语，巨龙在一堆尘土中蒸发！"));
 
     private final DragonSlayingStrategy dragonSlayingStrategy;
 

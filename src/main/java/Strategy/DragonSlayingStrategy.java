@@ -1,7 +1,7 @@
 package Strategy;
 
 /**
- * Strategy interface.
+ * 策略接口
  */
 @FunctionalInterface
 public interface DragonSlayingStrategy {
