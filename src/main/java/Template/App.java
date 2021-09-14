@@ -1,15 +1,14 @@
 package Template;
 
 /**
- * Template Method defines a skeleton for an algorithm. The algorithm subclasses provide
- * implementation for the blank parts.
+ * 模板方法定义了算法的骨架。算法子类提供空白部分的实现。
  *
- * <p>In this example {@link HalflingThief} contains {@link StealingMethod} that can be changed.
- * First the thief hits with {@link HitAndRunMethod} and then with {@link SubtleMethod}.
+ * <p>在此示例中，{@link HalflingThief} 小偷包含可以更改的 {@link StealingMethod}偷窃手法。
+ * 首先小偷用 {@link HitAndRunMethod} 偷东西，然后改用 {@link SubtleMethod} 偷东西。
  */
 public class App {
 
-  
+
   public static void main(String[] args) {
     HalflingThief thief = new HalflingThief(new HitAndRunMethod());
     thief.steal();

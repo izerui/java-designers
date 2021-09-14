@@ -3,23 +3,23 @@ package Template;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * HitAndRunMethod implementation of {@link StealingMethod}.
+ * 运动中直接偷的手法
  */
 @Slf4j
 public class HitAndRunMethod extends StealingMethod {
 
   @Override
   protected String pickTarget() {
-    return "old goblin woman";
+    return "老女人";
   }
 
   @Override
   protected void confuseTarget(String target) {
-    LOGGER.info("Approach the {} from behind.", target);
+    LOGGER.info("从后面接近 {}。", target);
   }
 
   @Override
   protected void stealTheItem(String target) {
-    LOGGER.info("Grab the handbag and run away fast!");
+    LOGGER.info("拿起手提包，快速逃跑！");
   }
 }
