@@ -15,6 +15,7 @@ public class App {
 
   public static void main(String[] args) {
 
+    // 生成指挥官1-中士2-士兵6 结构的树层次结构
     Unit commander = new Commander(
         new Sergeant(new Soldier(), new Soldier(), new Soldier()),
         new Sergeant(new Soldier(), new Soldier(), new Soldier())
