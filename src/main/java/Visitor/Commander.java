@@ -1,7 +1,7 @@
 package Visitor;
 
 /**
- * Commander.
+ * 指挥官.
  */
 public class Commander extends Unit {
 
@@ -17,6 +17,6 @@ public class Commander extends Unit {
 
   @Override
   public String toString() {
-    return "commander";
+    return "指挥官";
   }
 }

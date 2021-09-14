@@ -3,14 +3,14 @@ package Visitor;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * SoldierVisitor.
+ * 士兵访问者.
  */
 @Slf4j
 public class SoldierVisitor implements UnitVisitor {
 
   @Override
   public void visitSoldier(Soldier soldier) {
-    LOGGER.info("Greetings {}", soldier);
+    LOGGER.info("你好 {}", soldier);
   }
 
   @Override

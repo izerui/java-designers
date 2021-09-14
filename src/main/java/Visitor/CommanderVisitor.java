@@ -3,7 +3,7 @@ package Visitor;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * CommanderVisitor.
+ * 指挥官访问者.
  */
 @Slf4j
 public class CommanderVisitor implements UnitVisitor {
@@ -20,6 +20,6 @@ public class CommanderVisitor implements UnitVisitor {
 
   @Override
   public void visitCommander(Commander commander) {
-    LOGGER.info("Good to see you {}", commander);
+    LOGGER.info("很高兴看见你 {}", commander);
   }
 }

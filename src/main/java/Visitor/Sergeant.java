@@ -1,7 +1,7 @@
 package Visitor;
 
 /**
- * Sergeant.
+ * 中士.
  */
 public class Sergeant extends Unit {
 
@@ -17,6 +17,6 @@ public class Sergeant extends Unit {
 
   @Override
   public String toString() {
-    return "sergeant";
+    return "中士";
   }
 }
