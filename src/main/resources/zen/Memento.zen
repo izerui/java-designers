@@ -1,0 +1,20 @@
+App.main(args) {
+    // 备忘录 (栈: 后进先出)
+	Stack states = new Stack();
+	// 太阳
+	Star star = new Star(StarType.SUN, 10000000, 500000)
+	// 记录太阳的第一次观测结果
+	states.add(star.getMemento());
+	// 太阳变成了红矮星
+	star.timePasses()
+	// 记录第二次太阳观测结果
+	states.add(star.getMemento());
+	// 太阳由红矮星变成了死星
+	star.timePasses()
+	// 记录第三次观测结果
+	states.add(star.getMemento());
+	// 反向推演备忘
+	while(states.size() > 0) {
+		star.setMemento(states.pop()) 
+	}
+}

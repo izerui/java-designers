@@ -1,0 +1,15 @@
+App.main(args) {
+    // 象牙塔代理
+	WizardTower proxy = new WizardTowerProxy(new IvoryTower())
+	// 巫师通过代理进入象牙塔
+	proxy.enter(new Wizard()){
+	    if (numWizards < 3) {
+	      // 进入象牙塔
+          tower.enter(wizard);
+          // 记录多了一个人
+          numWizards++;
+        } else {
+            print("最多进三个人")
+        }
+	}
+}

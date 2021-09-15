@@ -1,0 +1,27 @@
+App.main(args) {
+	App app = new App();
+	app.run() {
+	    // 创建精灵王国
+		createKingdom(Kingdom.FactoryMaker.KingdomType.ELF) {
+			KingdomFactory kingdomFactory = Kingdom.FactoryMaker.makeFactory(kingdomType) {
+				 {
+					// return new ElfKingdomFactory();
+					// return new OrcKingdomFactory();
+					throw(new IllegalArgumentException("KingdomType not supported."));
+				}
+			}
+			// 创建国王
+			kingdom.setKing(kingdomFactory.createKing()) {
+				// this.king = king
+			}
+			// 创建城堡
+			kingdom.setCastle(kingdomFactory.createCastle()) {
+				// this.castle = castle
+			}
+			// 创建军队
+			kingdom.setArmy(kingdomFactory.createArmy()) {
+				// this.army = army
+			}
+		}
+	}
+}

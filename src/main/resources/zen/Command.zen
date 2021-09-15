@@ -1,0 +1,11 @@
+App.main(args) {
+    // 构造调用者
+	LeaderInvoker leaderInvoker = new LeaderInvoker();
+	// 构造实际干活的人
+	var receiver = new DeveloperReceiver();
+	// 让干活的人按命令干活
+	leaderInvoker.handler(new OACommand(receiver));
+	// 取消任务
+    leaderInvoker.cacelTask();
+	
+}

@@ -1,0 +1,28 @@
+App.main(args) {
+	LOGGER.info("骑士收到一个附魔了的剑.");
+	var enchantedSword = new Sword(new SoulEatingEnchantment()) {
+		// this.enchantment = enchantment
+	}
+	enchantedSword.wield() {
+		LOGGER.info("剑开始挥舞.");
+		enchantment.onActivate()}
+	enchantedSword.swing() {
+		LOGGER.info("剑刺了过去.");
+		enchantment.apply()}
+	enchantedSword.unwield() {
+		LOGGER.info("剑安静下来.");
+		enchantment.onDeactivate()}
+	LOGGER.info("女神收到一个附魔了锤子");
+	var hammer = new Hammer(new FlyingEnchantment()) {
+		// this.enchantment = enchantment
+	}
+	hammer.wield() {
+		LOGGER.info("挥舞着锤子.");
+		enchantment.onActivate()}
+	hammer.swing() {
+		LOGGER.info("锤子摆动起来.");
+		enchantment.apply()}
+	hammer.unwield() {
+		LOGGER.info("锤子安静下来.");
+		enchantment.onDeactivate()}
+}

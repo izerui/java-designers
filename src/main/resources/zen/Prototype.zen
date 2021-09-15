@@ -1,0 +1,8 @@
+App.main(args) {
+    // 创建英雄工厂, 默认初始化一些基础对象
+	HeroFactory factory = new HeroFactoryImpl(new Mage())
+	// 创建法师: 通过基础对象copy复制出高级对象
+	Mage mage = factory.createMage(){
+	    return mage.copy()
+	}
+}

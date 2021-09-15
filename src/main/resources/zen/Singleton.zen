@@ -1,0 +1,30 @@
+App.main(args) {
+    // 构造一个默认实例化的静态单例
+	IvoryTower ivoryTower1 = IvoryTower.getInstance() {
+		return INSTANCE;
+	}
+	// 构造一个第一次使用才实例化的静态单例
+	var threadSafeIvoryTower1 = ThreadSafeLazyLoadedIvoryTower.getInstance() {
+		if(instance == null) {
+			 {
+				if(instance == null) {
+					// instance = new ThreadSafeLazyLoadedIvoryTower()
+				}
+			}
+		}
+		return instance;
+	}
+	
+	// 构造一个静态内部类单例对象
+	var dcl1 = ThreadSafeDoubleCheckLocking.getInstance() {
+		ThreadSafeDoubleCheckLocking result = if(result == null) {
+			 {
+				// result = instance
+				if(result == null) {
+					// instance = result = new ThreadSafeDoubleCheckLocking()
+				}
+			}
+		}
+		return result;
+	}
+}

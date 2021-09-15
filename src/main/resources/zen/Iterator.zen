@@ -1,0 +1,13 @@
+App.main(args) {
+    // 指定要找的是戒指
+	demonstrateTreasureChestIteratorForType(RING) {
+	    // 从百宝箱中找戒指
+		Iterator itemIterator = TREASURE_CHEST.iterator(itemType) {
+			// return new TreasureChestItemIterator(this, itemType);
+		}
+		// 循环所有的戒指试戴
+		while(itemIterator.hasNext()) {
+		    // print
+		}
+	}
+}

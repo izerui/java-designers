@@ -1,0 +1,13 @@
+App.main(args) {
+    // 指挥官 - 中士 - 士兵
+	Unit commanderTree = new Commander(new Sergeant(), new Sergeant()) {
+		super(children) {
+			// this.children = children
+		}
+	}
+	// 访问士兵
+	commanderTree.accept(new SoldierVisitor()) {
+	    // lambda 执行访问 
+		Arrays.stream(children).forEach(lambda);
+	}
+}

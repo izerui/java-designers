@@ -1,0 +1,24 @@
+App.main(args) {
+    // 赤手空拳的巨魔
+	var troll = new SimpleTroll();
+	// 攻击
+	troll.attack()
+	// 脱离战斗
+	troll.fleeBattle()
+	
+	// --------------------------- 装饰器:对比下  -----------------
+	// 装饰了棍棒的巨魔
+	var clubbedTroll = new ClubbedTroll(troll) {
+		// this.decorated = decorated
+	}
+	// 攻击
+	clubbedTroll.attack() {
+	    // 拿着棍棒攻击
+		decorated.attack()
+	}
+	// 装饰器脱离战斗
+	clubbedTroll.fleeBattle() {
+	    // 实际脱离
+		decorated.fleeBattle()
+    }
+}

@@ -1,0 +1,15 @@
+App.main(args) {
+    // 继承了模板方法扩展后的子类
+    HitAndRunMethod method = new HitAndRunMethod()
+    // 盗贼
+	HalflingThief thief = new HalflingThief(method) {
+		// this.method = method
+	}
+	// 偷东西
+	thief.steal() {
+	    // 使用继承方法执行偷的动作
+		method.steal() {
+		    ...
+        }
+	}
+}

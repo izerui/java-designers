@@ -1,0 +1,10 @@
+App.main(args) {
+    // 传入铜币枚举类型,返回铜币
+	Coin coin1 = CoinFactory.getCoin(CoinType.COPPER) {
+		// return type.getConstructor().get();
+	}
+	// 传入金币枚举类型,返回金币
+	Coin coin2 = CoinFactory.getCoin(CoinType.GOLD) {
+		// return type.getConstructor().get();
+	}
+}

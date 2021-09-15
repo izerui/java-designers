@@ -1,0 +1,20 @@
+App.main(args) {
+    // 国王
+	OrcKing king = new OrcKing() {
+	    // 初始化链: 层级层次为: 指挥官 -> 中士 -> 士兵
+		buildChain() {
+			// chain = new OrcCommander(new OrcOfficer(new OrcSoldier(null)))
+		}
+	}
+	// 下达命令,构造一个request请求
+	king.makeRequest(new Request()) {
+	    // 开始链传播
+		chain.handleRequest(req) {
+		    // 传播处理,直到最后一个链
+			if(next != null) {
+			    // 实际处理方法
+				next.handleRequest(req)// Method re-entered
+			}
+		}
+	}
+}

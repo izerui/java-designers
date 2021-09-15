@@ -1,0 +1,22 @@
+App.main(args) {
+    // 长毛象
+	Mammoth mammoth = new Mammoth() {
+	    // 初始状态高兴
+		state = new PeacefulState(this)
+	}
+	// 观察长毛象,触发内部状态对象打印状态
+	mammoth.observe() {
+	    // 内部状态对象触发动作
+		this.state.observe()
+    }
+    // 长毛象改变了状态
+	mammoth.timePasses() {
+	    // 内部对象变成了生气状态
+		changeStateTo(new AngryState())
+	}
+	// 观察长毛象,触发内部现在是生气的状态对象打印状态
+	mammoth.observe() {
+	    // 打印生气状态
+		this.state.observe()
+    }
+}

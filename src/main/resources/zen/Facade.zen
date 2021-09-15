@@ -1,0 +1,14 @@
+App.main(args) {
+    // 定义一个外观
+	DwarvenGoldmineFacade facade = new DwarvenGoldmineFacade() {
+		workers = new ArrayList(...)
+	}
+	// 新的一天
+	facade.startNewDay() {
+	    // 让所有矿工 干两件事: 起来, 去干活
+		makeActions(workers, DwarvenMineWorker.Action.WAKE_UP, DwarvenMineWorker.Action.GO_TO_MINE) {
+		    // 每个矿工都干这两件事
+			workers.forEach(lambda);
+		}
+	}
+}

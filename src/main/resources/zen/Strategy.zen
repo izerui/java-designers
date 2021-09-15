@@ -1,0 +1,20 @@
+App.main(args) {
+    // 屠龙者(初始只会肉搏策略)
+	DragonSlayer dragonSlayer = new DragonSlayer(new MeleeStrategy()) {
+		// this.strategy = strategy
+	}
+	// 去战斗
+	dragonSlayer.goToBattle() {
+	    // 近战肉搏
+		strategy.execute()
+    }
+    // 改变策略 使用射击策略
+	dragonSlayer.changeStrategy(new ProjectileStrategy()) {
+		// this.strategy = strategy
+	}
+	// 去战斗
+	dragonSlayer.goToBattle() {
+	    // 开始射击
+		strategy.execute()
+    }
+}

@@ -1,0 +1,36 @@
+App.main(args) {
+    // 构造药剂商店
+	AlchemistShop alchemistShop = new AlchemistShop() {
+	    // 药剂工厂类
+		PotionFactory factory = new PotionFactory() {
+		    // 共享药剂类型 即: 享元对象
+			potions = new EnumMap<>(PotionType.class)
+		}
+		// 上层货架放入一些药剂
+		opShelf = Arrays.asList(
+		           factory.createPotion(PotionType.INVISIBILITY),
+		           factory.createPotion(PotionType.INVISIBILITY),
+		           factory.createPotion(PotionType.STRENGTH),
+		           factory.createPotion(PotionType.HEALING),
+		           factory.createPotion(PotionType.INVISIBILITY),
+		           factory.createPotion(PotionType.STRENGTH),
+		           factory.createPotion(PotionType.HEALING),
+		           factory.createPotion(PotionType.HEALING)
+		   )
+		// 下层货架放入一些药剂
+		bottomShelf = Arrays.asList(
+		        factory.createPotion(PotionType.POISON),
+		        factory.createPotion(PotionType.POISON),
+		        factory.createPotion(PotionType.POISON),
+		        factory.createPotion(PotionType.HOLY_WATER),
+		        factory.createPotion(PotionType.HOLY_WATER)
+		    )
+	}
+	// 勇士进来喝下所有药剂
+	alchemistShop.drinkPotions() {
+	    // 先喝上层货架的药剂
+		topShelf.forEach(Potion::drink);
+		// 再喝下层货架的药剂
+		bottomShelf.forEach(Potion::drink);
+	}
+}

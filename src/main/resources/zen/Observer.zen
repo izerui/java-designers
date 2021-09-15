@@ -1,0 +1,18 @@
+App.main(args) {
+    // 天气
+	Weather weather = new Weather()
+	// 添加观察者
+	weather.addObserver() {
+		observers.add(new Orcs());
+	}
+	// 天气在变化
+	weather.timePasses() {
+	    // 通知观察者
+		notifyObservers() {
+		    // 循环告知所有关注了天气的观察者
+			forEach(observers) {
+			    // 观察者接收到天气通知开始干活
+				obs.update(currentWeather)}
+		}
+	}
+}

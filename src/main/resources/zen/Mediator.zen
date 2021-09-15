@@ -1,0 +1,20 @@
+App.main(args) {
+    // 中介者对象: 部队
+	Party party = new PartyImpl() {
+	    
+		members = new ArrayList<>()
+	}
+	// 霍比特人
+	var hobbit = new Hobbit();
+	// 霍比特人加入部队
+	party.addMember(hobbit)
+	// 部队其他成员加入
+	party.addMember(...)
+	// 霍比特人发现敌人
+	hobbit.act(Action.ENEMY) {
+	    // 通知部队告知其他人
+		if(party != null) {
+		    // 部队通知其他所有人过来掩护
+			party.act(this, action)}
+	}
+}

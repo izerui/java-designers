@@ -1,0 +1,12 @@
+App.main(args) {
+    // 创建渔船适配器
+    var fishingAdapter = new FishingBoatAdapter()
+    // 船长引入适配器
+	var captain = new Captain(fishingAdapter) {
+		// this.rowingBoat = rowingBoat
+	}
+	// 船长使用适配器操作渔船
+	captain.row() {
+	// 渔船动了
+    rowingBoat.row()}
+}
