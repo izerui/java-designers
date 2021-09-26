@@ -109,11 +109,11 @@ Hero mage = new Hero.Builder(Profession.MAGE, "Riobard")
 
 ## 类图
 
-![alt text](./src/main/resources/uml/builder.urm.png "Builder class diagram")
+![alt text](/src/main/resources/puml/uml/builder.urm.png "Builder class diagram")
 
 ## 时序图
 
-![alt text](./src/main/resources/puml/Builder.png)
+![alt text](/src/main/resources/puml/puml/Builder.png)
 
 ## 适用场景
 

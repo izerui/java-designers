@@ -210,11 +210,11 @@ facade.endDay();
 
 ## 类图
 
-![alt text](./src/main/resources/uml/facade.urm.png "Facade pattern class diagram")
+![alt text](/src/main/resources/puml/uml/facade.urm.png "Facade pattern class diagram")
 
 ## 时序图
 
-![alt text](./src/main/resources/puml/Facade.png)
+![alt text](/src/main/resources/puml/puml/Facade.png)
 
 ## 实现方式
 

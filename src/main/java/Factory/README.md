@@ -121,11 +121,11 @@ LOGGER.info(coin2.getDescription());
 
 ## 类图
 
-![alt text](./src/main/resources/uml/factory.urm.png "Factory pattern class diagram")
+![alt text](/src/main/resources/puml/uml/factory.urm.png "Factory pattern class diagram")
 
 ## 时序图
 
-![alt text](./src/main/resources/puml/Factory.png)
+![alt text](/src/main/resources/puml/puml/Factory.png)
 
 ## 实现方式
 

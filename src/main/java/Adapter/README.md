@@ -98,11 +98,11 @@ captain.row();
 ```
 
 ## 类图
-![alt text](./src/main/resources/uml/adapter.urm.png "Adapter class diagram")
+![alt text](/src/main/resources/puml/uml/adapter.urm.png "Adapter class diagram")
 
 ## 时序图
 
-![alt text](./src/main/resources/puml/Adapter.png)
+![alt text](/src/main/resources/puml/puml/Adapter.png)
 
 ## 实现方式
 

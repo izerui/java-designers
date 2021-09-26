@@ -180,11 +180,11 @@ messenger.messageFromElves().print();
 
 ## 类图
 
-![alt text](./src/main/resources/uml/composite.urm.png "Composite class diagram")
+![alt text](/src/main/resources/puml/uml/composite.urm.png "Composite class diagram")
 
 ## 时序图
 
-![alt text](./src/main/resources/puml/Composite.png)
+![alt text](/src/main/resources/puml/puml/Composite.png)
 
 ## 实现方式
 
