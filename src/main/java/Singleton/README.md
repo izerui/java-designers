@@ -49,11 +49,11 @@ enumIvoryTower2=com.iluwatar.singleton.EnumIvoryTower@1221555852
 
 ## 类图
 
-![alt text](/src/main/resources/puml/uml/singleton.urm.png "Singleton pattern class diagram")
+![alt text](../../resources/puml/uml/singleton.urm.png "Singleton pattern class diagram")
 
 ## 时序图
 
-![alt text](/src/main/resources/puml/puml/Singleton.png)
+![alt text](../../resources/puml/puml/Singleton.png)
 
 ## 实现方式
 

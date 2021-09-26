@@ -209,11 +209,11 @@ hammer.unwield();
 
 ## 类图
 
-![alt text](/src/main/resources/puml/uml/bridge.urm.png "Bridge class diagram")
+![alt text](../../resources/puml/uml/bridge.urm.png "Bridge class diagram")
 
 ## 时序图
 
-![alt text](/src/main/resources/puml/puml/Bridge.png)
+![alt text](../../resources/puml/puml/Bridge.png)
 
 ## 实现方式
 

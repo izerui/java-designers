@@ -126,11 +126,11 @@ public class DragonSlayer {
 
 ## 类图
 
-![alt text](/src/main/resources/puml/uml/strategy_urm.png "Strategy")
+![alt text](../../resources/puml/uml/strategy_urm.png "Strategy")
 
 ## 时序图
 
-![alt text](/src/main/resources/puml/puml/Strategy.png)
+![alt text](../../resources/puml/puml/Strategy.png)
 
 ## 实现方式
 

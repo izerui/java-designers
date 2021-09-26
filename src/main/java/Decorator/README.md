@@ -131,11 +131,11 @@ LOGGER.info("武装巨魔的力量: {}.\n", clubbedTroll.getAttackPower());
 
 ## 类图
 
-![alt text](/src/main/resources/puml/uml/decorator.urm.png "Decorator pattern class diagram")
+![alt text](../../resources/puml/uml/decorator.urm.png "Decorator pattern class diagram")
 
 ## 时序图
 
-![alt text](/src/main/resources/puml/puml/Decorator.png)
+![alt text](../../resources/puml/puml/Decorator.png)
 
 ## 实现方式
 

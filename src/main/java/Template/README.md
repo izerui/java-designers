@@ -141,11 +141,11 @@ public class HalflingThief {
 
 ## 类图
 
-![alt text](/src/main/resources/puml/uml/template_method_urm.png "Template Method")
+![alt text](../../resources/puml/uml/template_method_urm.png "Template Method")
 
 ## 时序图
 
-![alt text](/src/main/resources/puml/puml/Template.png)
+![alt text](../../resources/puml/puml/Template.png)
 
 ## 实现方式
 

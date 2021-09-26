@@ -185,11 +185,11 @@ public class PartyImpl implements Party {
 
 ## 类图
 
-![alt text](/src/main/resources/puml/uml/mediator_1.png "Mediator")
+![alt text](../../resources/puml/uml/mediator_1.png "Mediator")
 
 ## 时序图
 
-![alt text](/src/main/resources/puml/puml/Mediator.png)
+![alt text](../../resources/puml/puml/Mediator.png)
 
 ## 实现方式
 

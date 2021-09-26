@@ -157,11 +157,11 @@ public class Weather {
 
 ## 类图
 
-![alt text](/src/main/resources/puml/uml/observer.png "Observer")
+![alt text](../../resources/puml/uml/observer.png "Observer")
 
 ## 时序图
 
-![alt text](/src/main/resources/puml/puml/Observer.png)
+![alt text](../../resources/puml/puml/Observer.png)
 
 ## 实现方式
 

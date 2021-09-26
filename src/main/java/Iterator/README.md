@@ -115,11 +115,11 @@ while (itemIterator.hasNext()) {
 
 ## 类图
 
-![alt text](/src/main/resources/puml/uml/iterator_1.png "Iterator")
+![alt text](../../resources/puml/uml/iterator_1.png "Iterator")
 
 ## 时序图
 
-![alt text](/src/main/resources/puml/puml/Iterator.png)
+![alt text](../../resources/puml/puml/Iterator.png)
 
 ## 实现方式
 
