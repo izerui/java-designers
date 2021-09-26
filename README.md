@@ -100,6 +100,3 @@
 
 ### <img alt="avatar" height="65" width="65" src="./src/main/resources/img/Visitor.png"/> [访问者 Visitor](Visitor.md)
 > 将算法与其所作用的对象隔离开来。
-
-## 示例代码
-[http://git.yj2025.com/platform/java-designers.git](http://git.yj2025.com/platform/java-designers.git)
