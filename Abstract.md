@@ -177,11 +177,11 @@ public static void main(String[] args) {
 
 ## 类图
 
-![alt text](./uml/abstract-factory.urm.png "Abstract Factory class diagram")
+![alt text](./src/main/resources/uml/abstract-factory.urm.png "Abstract Factory class diagram")
 
 ## 时序图
 
-![alt text](./puml/Abstract.png)
+![alt text](./src/main/resources/puml/Abstract.png)
 
 ## 实现方式
 

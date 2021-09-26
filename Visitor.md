@@ -225,11 +225,11 @@ commander.accept(new CommanderVisitor());
 
 ## 类图
 
-![alt text](./uml/visitor_1.png "Visitor")
+![alt text](./src/main/resources/uml/visitor_1.png "Visitor")
 
 ## 时序图
 
-![alt text](./puml/Visitor.png)
+![alt text](./src/main/resources/puml/Visitor.png)
 
 ## 实现方式
 

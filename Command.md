@@ -170,11 +170,11 @@ leaderInvoker.cacelTask();
 
 ## 类图
 
-![alt text](./uml/command.png "Command")
+![alt text](./src/main/resources/uml/command.png "Command")
 
 ## 时序图
 
-![alt text](./puml/Command.png)
+![alt text](./src/main/resources/puml/Command.png)
 
 ## 实现方式
 

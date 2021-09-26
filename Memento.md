@@ -154,11 +154,11 @@ Program output:
 
 ## 类图
 
-![alt text](./uml/memento.png "Memento")
+![alt text](./src/main/resources/uml/memento.png "Memento")
 
 ## 时序图
 
-![alt text](./puml/Memento.png)
+![alt text](./src/main/resources/puml/Memento.png)
 
 ## 实现方式
 

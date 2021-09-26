@@ -200,11 +200,11 @@ king.makeRequest(new Request(RequestType.COLLECT_TAX, "收税"));
 
 ## 类图
 
-![alt text](./uml/chain-of-responsibility.urm.png "Chain of Responsibility class diagram")
+![alt text](./src/main/resources/uml/chain-of-responsibility.urm.png "Chain of Responsibility class diagram")
 
 ## 时序图
 
-![alt text](./puml/Chain.png)
+![alt text](./src/main/resources/puml/Chain.png)
 
 ## 实现方式
 
