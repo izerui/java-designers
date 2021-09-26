@@ -144,11 +144,11 @@ public class Mammoth {
 
 ## 类图
 
-![alt text](../../resources/puml/uml/state_urm.png "State")
+![alt text](../../resources/uml/state_urm.png "State")
 
 ## 时序图
 
-![alt text](../../resources/puml/puml/State.png)
+![alt text](../../resources/puml/State.png)
 
 ## 实现方式
 

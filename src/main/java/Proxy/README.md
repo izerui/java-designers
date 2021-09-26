@@ -116,11 +116,11 @@ Brown wizard 不允许进入!
 
 ## 类图
 
-![alt text](../../resources/puml/uml/proxy.urm.png "Proxy pattern class diagram")
+![alt text](../../resources/uml/proxy.urm.png "Proxy pattern class diagram")
 
 ## 时序图
 
-![alt text](../../resources/puml/puml/Proxy.png)
+![alt text](../../resources/puml/Proxy.png)
 
 ## 实现方式
 

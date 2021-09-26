@@ -215,11 +215,11 @@ alchemistShop.drinkPotions();
 
 ## 类图
 
-![alt text](../../resources/puml/uml/flyweight.urm.png "Flyweight pattern class diagram")
+![alt text](../../resources/uml/flyweight.urm.png "Flyweight pattern class diagram")
 
 ## 时序图
 
-![alt text](../../resources/puml/puml/Flyweight.png)
+![alt text](../../resources/puml/Flyweight.png)
 
 ## 实现方式
 

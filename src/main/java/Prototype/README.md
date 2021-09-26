@@ -177,11 +177,11 @@ LOGGER.info(beast.toString());
 
 ## 类图
 
-![alt text](../../resources/puml/uml/prototype.urm.png "Prototype pattern class diagram")
+![alt text](../../resources/uml/prototype.urm.png "Prototype pattern class diagram")
 
 ## 时序图
 
-![alt text](../../resources/puml/puml/Prototype.png)
+![alt text](../../resources/puml/Prototype.png)
 
 ## 实现方式
 
